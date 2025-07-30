@@ -1,0 +1,20 @@
+#ldc_set_location -site {D11} [get_ports clk]
+#create_clock -name {clk} -period 20 [get_ports clk]
+#ldc_set_location -site {G12} [get_ports spi_clk]
+#ldc_set_location -site {F13} [get_ports spi_cs]
+#ldc_set_location -site {G14} [get_ports spi_mosi]
+#ldc_set_location -site {G13} [get_ports spi_de]
+#ldc_set_port -iobuf {IO_TYPE=LVCMOS33 CLAMP=OFF} [get_ports spi_clk]
+#ldc_set_port -iobuf {PULLMODE=NONE IO_TYPE=LVCMOS33 CLAMP=OFF} [get_ports spi_de]
+#ldc_set_port -iobuf {IO_TYPE=LVCMOS33 CLAMP=OFF} [get_ports spi_mosi]
+#ldc_set_port -iobuf {IO_TYPE=LVCMOS33 CLAMP=ON} [get_ports clk]
+#ldc_set_port -iobuf {IO_TYPE=LVCMOS33 CLAMP=OFF} [get_ports spi_cs]
+#create_clock -period <20> -name <> -waveform <> -add []
+
+
+
+ #create_clock -name clk -period 20 [get_ports clk]
+#     create_clock -name my_other_user_clock -period 6 [get_ports CK2]
+#  Example 2
+#    The following example creates a clock on port CK3 with a period of 7.1, and has two edges at 0 and 4.1:
+#     create_clock -period 7.1 -waveform {0 4.1} [get_ports CK3]
