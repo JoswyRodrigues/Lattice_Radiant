@@ -1,0 +1,2 @@
+# Lattice_Radiant
+SPI_Protocol_testing_for_custom_board
